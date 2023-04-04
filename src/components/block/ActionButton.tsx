@@ -6,6 +6,7 @@ interface buttonType {
   bgColor?: string;
   fontSize?: string;
   width?: string;
+  padding?: string;
 }
 
 interface actionButtonType extends buttonType {
@@ -18,9 +19,11 @@ const Container = styled.div<buttonType>`
   width: ${(e) => e.width || '100%'};
   font-size: ${(e) => e.fontSize};
   background: ${(e) => e.bgColor || 'white'};
-  padding: 1rem 0;
+  padding: ${(e) => e.padding || '1rem 0'};
   border-radius: 5px;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
 `;
 
@@ -31,9 +34,11 @@ const ActionButton = ({
   textColor,
   text,
   action,
+  padding,
 }: actionButtonType) => {
   return (
     <Container
+      padding={padding}
       fontSize={fontSize}
       bgColor={bgColor}
       width={width}

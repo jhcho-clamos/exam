@@ -30,6 +30,16 @@ body {
   height: 100%;
 }
 
+::-webkit-scrollbar {
+  background: gray;
+  border-radius: 10px;
+  width: 11px;
+}
+::-webkit-scrollbar-thumb {
+  background: #f2f2f2;
+  border-radius: 10px;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;

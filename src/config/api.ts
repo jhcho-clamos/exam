@@ -13,6 +13,8 @@ const Api = async ({ method, url, data, params }: ApiType) => {
 };
 
 export default {
-  userLogin: (data: Object) =>
+  userLogin: (data: object) =>
     Api({ method: 'post', url: '/todo/login', data: data }),
+  getTodoList: (userId: string) =>
+    Api({ method: 'get', url: `/todo/list/${userId}` }),
 };
