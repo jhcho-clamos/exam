@@ -34,7 +34,7 @@ const Login = () => {
   );
 
   useEffect(() => {
-    if (idRef.current) {
+    if (idRef.current !== null) {
       idRef.current.focus();
     }
   }, []);

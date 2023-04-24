@@ -6,7 +6,7 @@ interface listType {
 }
 const ListTable = ({ data }: listType) => {
   return (
-    <div className={'w-full h-5/6 max-h-screen overflow-auto mt-20'}>
+    <div className={'w-full h-5/6 max-h-screen overflow-auto mt-10'}>
       {data?.map((r: any, index: number) => (
         <div
           key={`listkey${index}`}
